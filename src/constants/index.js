@@ -1,0 +1,1 @@
+// this file contains all the constant text on site
