@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/SerwisKacperek/static/css/main.60a01f97.css",
-    "main.js": "/SerwisKacperek/static/js/main.ab491fdb.js",
+    "main.css": "/SerwisKacperek/static/css/main.5b8237cc.css",
+    "main.js": "/SerwisKacperek/static/js/main.ea25fff0.js",
     "static/js/787.b78ee872.chunk.js": "/SerwisKacperek/static/js/787.b78ee872.chunk.js",
+    "static/media/close.svg": "/SerwisKacperek/static/media/close.c77f10e4c08d40af5f1ccf25a43b2ac5.svg",
+    "static/media/menu.svg": "/SerwisKacperek/static/media/menu.0b8796dcff6b9d88f160a5096039aa18.svg",
     "index.html": "/SerwisKacperek/index.html",
-    "main.60a01f97.css.map": "/SerwisKacperek/static/css/main.60a01f97.css.map",
-    "main.ab491fdb.js.map": "/SerwisKacperek/static/js/main.ab491fdb.js.map",
+    "main.5b8237cc.css.map": "/SerwisKacperek/static/css/main.5b8237cc.css.map",
+    "main.ea25fff0.js.map": "/SerwisKacperek/static/js/main.ea25fff0.js.map",
     "787.b78ee872.chunk.js.map": "/SerwisKacperek/static/js/787.b78ee872.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.60a01f97.css",
-    "static/js/main.ab491fdb.js"
+    "static/css/main.5b8237cc.css",
+    "static/js/main.ea25fff0.js"
   ]
 }
