@@ -3,16 +3,19 @@ import {close, menu} from '../assets';
 import {navLinks} from '../constants';
 
 const Navbar = () => {
+  const [active, setActive] = useState("home");
   const [toggle, settoggle] = useState(false);
   return (
     <nav className='w-full flex py-6 justify-between items-center navbar'>
       {/* <img src={logo} alt="Serwis Kacperek" className='w-[170px] h-[32px]'/> */}
+      <h6 className='font-poppins text-text_color sm:text-[18px]'>Serwis <span className='font-semibold text-gradient'>Kacperek</span></h6>
 
       <ul className='list-none sm:flex hidden justify-end items-center flex-1'> {/*big navbar*/}
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[16px] ${index === navLinks.length-1 ? 'mr-0' : 'mr-10'} text-white `}
+            className={`font-poppins font-normal cursor-pointer text-[16px] ${index === navLinks.length-1 ? 'mr-0' : 'mr-10'} ${active === nav.id ? "text-text_color" : "text-dimWhite"} `}
+            onClick = {() => setActive(nav.id)}
           >
             <a href={`#${nav.id}`}>
               {nav.title}
@@ -33,7 +36,8 @@ const Navbar = () => {
             {navLinks.map((nav, index) => (
               <li
                 key={nav.id}
-                className={`font-poppins font-normal cursor-pointer text-[16px] ${index === navLinks.length-1 ? 'mb-0' : 'mb-4'} text-white `}
+                className={`font-poppins font-normal cursor-pointer text-[16px] ${index === navLinks.length-1 ? 'mb-0' : 'mb-4'} ${active === nav.id ? "text-text_color" : "text-dimWhite"} `}
+                onClick = {() => setActive(nav.id)}
               >
                 <a href={`#${nav.id}`}>
                   {nav.title}

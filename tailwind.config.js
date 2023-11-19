@@ -5,10 +5,11 @@ module.exports = {
     extend: {
       colors: {
         background: "#131417",
-        text: "#FFFFFF",
+        text_color: "#FFFFFF",
         primary: "#2AE0E9",
         secondary: "#2C303A",
         accent: "#E4D944",
+        dimWhite: "rgba(255, 255, 255, 0.7)",
       },
       fontFamily: ["Poppins, sans-serif"],
     },
