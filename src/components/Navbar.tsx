@@ -4,7 +4,7 @@ import {navLinks} from '../constants';
 
 const Navbar = () => {
   const [active, setActive] = useState("home");
-  const [toggle, settoggle] = useState(false);
+  const [toggle, setToggle] = useState(false);
   return (
     <nav className='w-full flex py-6 justify-between items-center navbar'>
       {/* <img src={logo} alt="Serwis Kacperek" className='w-[170px] h-[32px]'/> */}
@@ -29,22 +29,22 @@ const Navbar = () => {
           src={toggle ? close : menu} 
           alt='menu' 
           className='w-[28px] h-[28px] object-contain'
-          onClick={() => settoggle((prev) => !prev)}/>
+          onClick={() => setToggle((prev) => !prev)}/>
 
           <div className={`${!toggle ? 'hidden' : 'flex'} p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}>
-          <ul className='list-none flex justify-end items-start flex-1 flex-col'>
-            {navLinks.map((nav, index) => (
-              <li
-                key={nav.id}
-                className={`font-poppins font-normal cursor-pointer text-[16px] ${index === navLinks.length-1 ? 'mb-0' : 'mb-4'} ${active === nav.id ? "text-text_color" : "text-dimWhite"} `}
-                onClick = {() => setActive(nav.id)}
-              >
-                <a href={`#${nav.id}`}>
-                  {nav.title}
-                </a>
-              </li>
-            ))}
-          </ul>
+            <ul className='list-none flex justify-end items-start flex-1 flex-col'>
+              {navLinks.map((nav, index) => (
+                <li
+                  key={nav.id}
+                  className={`font-poppins font-normal cursor-pointer text-[16px] ${index === navLinks.length-1 ? 'mb-0' : 'mb-4'} ${active === nav.id ? "text-text_color" : "text-dimWhite"} `}
+                  onClick = {() => setActive(nav.id)}
+                >
+                  <a href={`#${nav.id}`}>
+                    {nav.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
       </div>
     </nav>
