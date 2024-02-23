@@ -1,20 +1,23 @@
 import React, {useState} from 'react';
 import {close, menu} from '../assets';
 import {navLinks} from '../constants';
+import styles from '../style';
 
 const Navbar = () => {
   const [active, setActive] = useState("home");
   const [toggle, setToggle] = useState(false);
   return (
-    <nav className='w-full flex py-6 justify-between items-center navbar'>
-      {/* <img src={logo} alt="Serwis Kacperek" className='w-[170px] h-[32px]'/> */}
-      <h6 className='font-poppins text-text_color sm:text-[18px]'>Serwis <span className='font-semibold text-gradient'>Kacperek</span></h6>
+    <nav className='flex w-full justify-between items-center navbar px-[32px] md:px-[11.25%] pt-14 py-[16px]'>
+      <div>
+        {/* <img src={logo} alt="SerwisKacperekLogo" className='w-[170px] h-[32px]'/> */}
+        <h6 className='font-poppins text-text_color sm:text-[18px]'>Serwis <span className='font-semibold text-gradient'>Kacperek</span></h6>
+      </div>
 
-      <ul className='list-none sm:flex hidden justify-end items-center flex-1'> {/*big navbar*/}
+      <ul className='sm:flex hidden items-start gap-x-8 justify-items-center self-center text-text-light'> {/*big navbar*/}
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[16px] ${index === navLinks.length-1 ? 'mr-0' : 'mr-10'} ${active === nav.id ? "text-text_color" : "text-dimWhite"} `}
+            className={`${styles.SemiBoldHeader4} transition duration-250 hover:opacity-75`}
             onClick = {() => setActive(nav.id)}
           >
             <a href={`#${nav.id}`}>
@@ -24,19 +27,19 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <div className='sm:hidden flex flex-1 justify-end items-center'> {/*mobile navbar*/}
+      <div className='sm:hidden flex justify-end items-center align-middle'> {/*mobile navbar*/}
           <img 
           src={toggle ? close : menu} 
-          alt='menu' 
+          alt='menuIcon' 
           className='w-[28px] h-[28px] object-contain'
           onClick={() => setToggle((prev) => !prev)}/>
 
-          <div className={`${!toggle ? 'hidden' : 'flex'} p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}>
-            <ul className='list-none flex justify-end items-start flex-1 flex-col'>
+          <div className={`${!toggle ? 'hidden' : 'flex'} p-4 bg-black-gradient absolute top-20 right-0 mx-4 my-4 min-w-[140px] rounded-xl sidebar`}>
+            <ul className='list-none flex flex-col flex-1 gap-y-2 justify-end items-start cursor-pointer'>
               {navLinks.map((nav, index) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-normal cursor-pointer text-[16px] ${index === navLinks.length-1 ? 'mb-0' : 'mb-4'} ${active === nav.id ? "text-text_color" : "text-dimWhite"} `}
+                  className={`${styles.BaseText} cursor-pointer text-text-light`}
                   onClick = {() => setActive(nav.id)}
                 >
                   <a href={`#${nav.id}`}>

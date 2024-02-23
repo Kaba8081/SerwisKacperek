@@ -1,17 +1,16 @@
 // this file contains some useful style packs
 const styles = {
-    boxWidth: "xl:max-w-[1280px] w-full",
-    paragraph: "font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px]",
+    // font styles
+    BoldHeader1: "font-poppins font-bold text-6xl sm:text-7xl /7xl 2xl:text-8xl /8xl color-000000",
+    BoldHeader2: "font-poppins font-bold text-5xl /6xl 2xl:text-7xl /7xl color-000000",
+    BoldHeader3: "font-poppins font-bold text-4xl sm:text-5xl /4xl 2xl:text-6xl /5xl color-000000",
 
-    flexCenter: "flex justify-center items-center",
-    flexStart: "flex justify-center items-start",
-    
-    paddingX: "sm:px-16 px-6",
-    paddingY: "sm:py-16 py-6",
-    padding: "sm:px-16 px-6 sm:py-12 py-4",
+    SemiBoldHeader2: "font-inter font-semibold text-xl sm:text-2xl 2xl:text-4xl color-000000",
+    SemiBoldHeader3: "font-inter font-semibold text-2xl 2xl:text-3xl color-000000",
+    SemiBoldHeader4: "font-inter font-semibold text-lg 2xl:text-2xl color-000000",
 
-    marginX: "sm:mx-16 mx-6",
-    marginY: "sm:my-16 my-6",
+    BaseText: "font-poppins text-sm sm:text-base 2xl:text-xl color-000000",
+    BoldBase: "font-poppins font-bold text-md smtext-xl /lg 2xl:text-2xl /xl color-000000",
 }
 
 export default styles;
